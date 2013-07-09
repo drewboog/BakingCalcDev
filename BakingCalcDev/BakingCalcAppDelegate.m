@@ -13,13 +13,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // TBD: Create new class for new view controllers..
+    
+    // Add view controllers and add them to the tabs
+    // TBD: Make sure names match those in view controller
+    UIViewController *enterNewViewController = [[ViewController alloc] init];
+    enterNewViewController.title = @"New Recipe";
+    
+    UIViewController *savedEntryViewController = [[ViewController alloc] init];
+    savedEntryViewController.title = @"Recipes";
+    
+    enterNewViewController.view.backgroundcolor = [UIColor blueColor];
+    savedEntryViewController.view.backgroundcolor = [UIColor yellowColor];
+    
+    // For this to work there must be a "tab_icon_new.png" saved in cache/filesystem.. TBD!
+    enterNewViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_new"];
+    savedEntryViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_saved"];
+    
+    
+    UITabBarController *tabBarController [[UITabBarController alloc] init];
+    
+    [tabBarController setViewController:[enterNewViewController,savedEntryViewController]];
+    
     // Create the UI window:
-    CGRect viewRect = [[UIScreen mainScreen] bounds];
-    self.window = [[UIWindow alloc] initWithFrame:viewRect];
-    self.viewController = [[ViewController alloc] init];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // self.viewController = [[ViewController alloc] init]; - chap1
     
     // Viewcontroller gets control of the window:
-    self.window.rootViewController =  self.viewController;
+    //self.window.rootViewController =  self.viewController; - chap1
+    self.window.rootViewController =  tabBarController;
     
     // Recieve all keyboard and touch events:
     [self.window makeKeyAndVisible];
