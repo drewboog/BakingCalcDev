@@ -30,10 +30,11 @@
     enterNewViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_new"];
     savedEntryViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_saved"];
     
+    //homePageViewController TBD!
+    UINavigationController *navController [[UINavigationController alloc] 
+                                                initWithRootViewController:homePageViewController]; 
     
-    UITabBarController *tabBarController [[UITabBarController alloc] init];
-    
-    [tabBarController setViewController:[enterNewViewController,savedEntryViewController]];
+    // [tabBarController setViewController:[enterNewViewController,savedEntryViewController]]; - chap3
     
     // Create the UI window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -41,11 +42,13 @@
     
     // Viewcontroller gets control of the window:
     //self.window.rootViewController =  self.viewController; - chap1
-    self.window.rootViewController =  tabBarController;
+    self.window.rootViewController =  navController;
     
     // Recieve all keyboard and touch events:
     [self.window makeKeyAndVisible];
     return YES;
+    
+    // 7/9, Left off at slide 98!- Debugging needed now.. 
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
