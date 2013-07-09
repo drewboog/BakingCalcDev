@@ -1,23 +1,63 @@
 //
 //  BakingCalcViewController.m
-//  BakingCalcDev
+//  BakingCalc
 //
-//  Created by Andrew Hazlett on 7/8/13.
+//  Created by Andrew Hazlett on 7/7/13.
 //  Copyright (c) 2013 DrewCurtis. All rights reserved.
 //
 
 #import "BakingCalcViewController.h"
 
-@interface BakingCalcViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation BakingCalcViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	self.view.backgroundColor = [UIColor greenColor];
+    
+    self.enterNewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.enterNewButton.frame = CGRectMake(75,100,150,44);
+    [self.enterNewButton setTitle:@"New Recipe" forState:UIControlStateNormal];
+    [self.view addSubview:self.enterNewButton];
+    
+    [self.enterNewButton addTarget:self
+                            action:@selector(buttonPressed:)
+                  forControlEvents:UIControlEventTouchUpInside];
+    
+    self.savedEntryButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.savedEntryButton.frame = CGRectMake(75,200,150,44);
+    [self.savedEntryButton setTitle:@"Saved Recipes" forState:UIControlStateNormal];
+    [self.view addSubview:self.savedEntryButton];
+    
+    [self.savedEntryButton addTarget:self
+                            action:@selector(buttonPressed:)
+                  forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+-(void)loadView
+{
+    CGRect viewRect = [[UIScreen mainScreen] bounds];
+    UIView *view = [[UIView alloc] initWithFrame:viewRect];
+    self.view = view;
+}
+
+-(void)buttonPressed:(UIButton *)sender
+{
+    if ([sender isEqual:self.enterNewButton])
+    {
+        
+    }
+    
+    if ([sender isEqual:self.savedEntryButton])
+    {
+        
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
