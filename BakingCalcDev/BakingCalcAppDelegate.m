@@ -9,7 +9,7 @@
 #import "BakingCalcAppDelegate.h"
 #import "BakingCalcViewController.h"
 
-#import "HomePageViewController.h" //TBD still
+//#import "HomePageViewController.h" //Using normal viewController for this
 #import "EnterNewViewController.h"
 #import "SavedEntryViewController.h"
 
@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // TBD: Create new class for new view controllers..
-    UIViewController *homePageViewController = [[HomePageViewController alloc] init];
+    UIViewController *homePageViewController = [[ViewController alloc] init];
     //homePageViewController.title = @"Baking Calc!";
     
     // Add view controllers and add them to the tabs
