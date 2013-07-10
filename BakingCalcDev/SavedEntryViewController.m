@@ -17,11 +17,9 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self) 
+    {
         // Custom initialization
-        
-        self.view.backgroundColor = [UIColor blueColor];
-        
         UIImageView *recipeImageView = [[UIImageView alloc] initWithImage:
                                         [UIImage imageNamed:@"recipe.jpg"]];
         
@@ -42,6 +40,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor blueColor];
 }
 
 - (void)didReceiveMemoryWarning
