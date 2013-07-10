@@ -9,28 +9,32 @@
 #import "BakingCalcAppDelegate.h"
 #import "BakingCalcViewController.h"
 
+#import "HomePageViewController.h" //TBD still
+#import "EnterNewViewController.h"
+#import "SavedEntryViewController.h"
+
 @implementation BakingCalcAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // TBD: Create new class for new view controllers..
-    UIViewController *homePageViewController = [[ViewController alloc] init];
-    homePageViewController.title = @"Baking Calc!";
+    UIViewController *homePageViewController = [[HomePageViewController alloc] init];
+    //homePageViewController.title = @"Baking Calc!";
     
     // Add view controllers and add them to the tabs
     // TBD: Make sure names match those in view controller
-    UIViewController *enterNewViewController = [[ViewController alloc] init];
-    enterNewViewController.title = @"New Recipe";
+    UIViewController *enterNewViewController = [[EnterNewViewController alloc] init];
+    //enterNewViewController.title = @"New Recipe";
     
-    UIViewController *savedEntryViewController = [[ViewController alloc] init];
-    savedEntryViewController.title = @"Recipes";
+    UIViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
+    //savedEntryViewController.title = @"Recipes";
     
-    enterNewViewController.view.backgroundColor = [UIColor blueColor];
-    savedEntryViewController.view.backgroundColor = [UIColor yellowColor];
+    //enterNewViewController.view.backgroundColor = [UIColor blueColor];
+    //savedEntryViewController.view.backgroundColor = [UIColor yellowColor];
     
-    // For this to work there must be a "tab_icon_new.png" saved in cache/filesystem.. TBD!
-    enterNewViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_new"];
-    savedEntryViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_saved"];
+    // For this to work there must be a "tab_icon_new.png" saved in cache/filesystem.. TBD! 
+    //enterNewViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_new"]; - chap3
+    //savedEntryViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_saved"]; - chap3
     
     //homePageViewController TBD!
     UINavigationController *navController [[UINavigationController alloc] 
@@ -40,10 +44,8 @@
     
     // Create the UI window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // self.viewController = [[ViewController alloc] init]; - chap1
     
     // Viewcontroller gets control of the window:
-    //self.window.rootViewController =  self.viewController; - chap1
     self.window.rootViewController =  navController;
     
     // Recieve all keyboard and touch events:
