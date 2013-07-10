@@ -20,7 +20,7 @@
     if (self) {
         // Custom initialization
         self.title = @"New Recipe";
-        self.tabBarItem.image = [UIImage imageNamed:@"tab_icon_new"];
+        //self.tabBarItem.image = [UIImage imageNamed:@"tab_icon_new"]; -chap3
     }
     return self;
 }
