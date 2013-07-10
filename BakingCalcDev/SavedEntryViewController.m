@@ -20,6 +20,9 @@
     if (self) 
     {
         // Custom initialization
+        
+        self.title = @"Recipe";
+        
         UIImageView *recipeImageView = [[UIImageView alloc] initWithImage:
                                         [UIImage imageNamed:@"recipe.jpg"]];
         
