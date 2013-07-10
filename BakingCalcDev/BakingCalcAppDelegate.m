@@ -14,6 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // TBD: Create new class for new view controllers..
+    UIViewController *homePageViewController = [[ViewController alloc] init];
+    homePageViewController.title = @"Baking Calc!";
     
     // Add view controllers and add them to the tabs
     // TBD: Make sure names match those in view controller
@@ -23,8 +25,8 @@
     UIViewController *savedEntryViewController = [[ViewController alloc] init];
     savedEntryViewController.title = @"Recipes";
     
-    enterNewViewController.view.backgroundcolor = [UIColor blueColor];
-    savedEntryViewController.view.backgroundcolor = [UIColor yellowColor];
+    enterNewViewController.view.backgroundColor = [UIColor blueColor];
+    savedEntryViewController.view.backgroundColor = [UIColor yellowColor];
     
     // For this to work there must be a "tab_icon_new.png" saved in cache/filesystem.. TBD!
     enterNewViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_new"];
@@ -32,7 +34,7 @@
     
     //homePageViewController TBD!
     UINavigationController *navController [[UINavigationController alloc] 
-                                                initWithRootViewController:homePageViewController]; 
+                                           initWithRootViewController:homePageViewController];
     
     // [tabBarController setViewController:[enterNewViewController,savedEntryViewController]]; - chap3
     

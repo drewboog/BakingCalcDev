@@ -18,6 +18,8 @@
 		5F7876A3178BBD700021C615 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F7876A2178BBD700021C615 /* Default-568h@2x.png */; };
 		5F7876A6178BBD700021C615 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7876A4178BBD700021C615 /* MainStoryboard.storyboard */; };
 		5F7876A9178BBD700021C615 /* BakingCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7876A8178BBD700021C615 /* BakingCalcViewController.m */; };
+		5F7876B3178D082D0021C615 /* SavedEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7876B2178D082D0021C615 /* SavedEntryViewController.m */; };
+		5F7876B6178D088D0021C615 /* EnterNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7876B5178D088D0021C615 /* EnterNewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		5F7876A5178BBD700021C615 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5F7876A7178BBD700021C615 /* BakingCalcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BakingCalcViewController.h; sourceTree = "<group>"; };
 		5F7876A8178BBD700021C615 /* BakingCalcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BakingCalcViewController.m; sourceTree = "<group>"; };
+		5F7876B1178D082D0021C615 /* SavedEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedEntryViewController.h; sourceTree = "<group>"; };
+		5F7876B2178D082D0021C615 /* SavedEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedEntryViewController.m; sourceTree = "<group>"; };
+		5F7876B4178D088D0021C615 /* EnterNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterNewViewController.h; sourceTree = "<group>"; };
+		5F7876B5178D088D0021C615 /* EnterNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterNewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				5F7876A7178BBD700021C615 /* BakingCalcViewController.h */,
 				5F7876A8178BBD700021C615 /* BakingCalcViewController.m */,
 				5F787693178BBD700021C615 /* Supporting Files */,
+				5F7876B1178D082D0021C615 /* SavedEntryViewController.h */,
+				5F7876B2178D082D0021C615 /* SavedEntryViewController.m */,
+				5F7876B4178D088D0021C615 /* EnterNewViewController.h */,
+				5F7876B5178D088D0021C615 /* EnterNewViewController.m */,
 			);
 			path = BakingCalcDev;
 			sourceTree = "<group>";
@@ -177,6 +187,8 @@
 				5F787699178BBD700021C615 /* main.m in Sources */,
 				5F78769D178BBD700021C615 /* BakingCalcAppDelegate.m in Sources */,
 				5F7876A9178BBD700021C615 /* BakingCalcViewController.m in Sources */,
+				5F7876B3178D082D0021C615 /* SavedEntryViewController.m in Sources */,
+				5F7876B6178D088D0021C615 /* EnterNewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

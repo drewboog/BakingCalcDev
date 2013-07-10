@@ -26,6 +26,8 @@
     
     
     // Add button 1, New recipe
+    //self.view.backgroundcolor = [UIColor blueColor];
+    
     self.enterNewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.enterNewButton.frame = CGRectMake(85,100,150,44);
     [self.enterNewButton setTitle:@"New Recipe" forState:UIControlStateNormal];
