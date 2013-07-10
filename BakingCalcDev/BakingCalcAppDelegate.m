@@ -23,10 +23,10 @@
     
     // Add view controllers and add them to the tabs
     // TBD: Make sure names match those in view controller
-    UIViewController *enterNewViewController = [[EnterNewViewController alloc] init];
+    //UIViewController *enterNewViewController = [[EnterNewViewController alloc] init];
     //enterNewViewController.title = @"New Recipe";
     
-    UIViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
+    //UIViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
     //savedEntryViewController.title = @"Recipes";
     
     //enterNewViewController.view.backgroundColor = [UIColor blueColor];
