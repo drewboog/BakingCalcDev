@@ -44,6 +44,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blueColor];
+    
+    // Make picture bigger when clicked on:
+    UIImageView *zoomedImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"recipe.jpg"]];
+    zoomedImageView.frame = self.view.frame;
+    [self.view addSubview:zoomedImageView];
 }
 
 - (void)didReceiveMemoryWarning
