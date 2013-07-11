@@ -17,7 +17,8 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
+    if (self) 
+    {
         // Custom initialization
     }
     return self;
@@ -46,14 +47,14 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -62,6 +63,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+
+    NSArray *recipeNames = @[@"Punkin pi",@"Bread puddin",@"Apple crsp",@"Fluffernutter",@"Orangesycle"];
+    cell.textLabel.text = names[indexPath.row];
     
     return cell;
 }
@@ -116,6 +120,14 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+     
+     // Temp solution, not sure if this will work.. may have to use isEqual: ...
+     if (indexPath==1)
+     {
+        SavedEntryViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
+        [self.navigationController pushViewController:savedEntryViewController animated:YES];
+     }
+     
 }
 
 @end
