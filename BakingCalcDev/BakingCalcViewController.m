@@ -8,6 +8,8 @@
 
 #import "BakingCalcViewController.h"
 #import "EnterNewViewController.h"
+
+#import "SavedEntryTableViewController.h"
 #import "SavedEntryViewController.h"
 
 @interface ViewController ()
@@ -76,9 +78,17 @@
     
     if ([sender isEqual:self.savedEntryButton])
     {
-        SavedEntryViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
-        [self.navigationController pushViewController:savedEntryViewController
-                                             animated:YES];
+
+
+       RecipeTableViewController *recipeTableViewController = [[recipeTableViewController alloc]
+                                                   initWithStyle:UITableViewStyleGrouped];
+       [self.navigationController pushViewController:recipeTableViewController
+                                            animated:YES];
+                                            
+    	// Will be called from table view controller now.. 
+        //SavedEntryViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
+        //[self.navigationController pushViewController:savedEntryViewController
+                                             //animated:YES];
     }
 
 }
