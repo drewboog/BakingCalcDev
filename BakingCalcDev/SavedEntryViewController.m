@@ -31,7 +31,7 @@
         [self.view addSubview:recipeImageView];
         
         
-        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,140,280,40);
+        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,140,280,40)];
                               // Fonts and formatting slide 85:
                               nameLabel.text = @"Recipe: Punkin pi";
                               [self.view addSubview:nameLabel];
@@ -49,11 +49,11 @@
     // Make picture bigger when clicked on: Image button!
     UIButton *zoomedImageView = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    [zoomedImageView setImage:[UIImage imageNamed:@"recipe.jpg"]
-                    forState:UIControlStateNormal];
-    [zoomedImageView setImage:[UIImage imageNamed:@"recipe.jpg"]
-                     forState:UIControlStateHightlighted];
-    [zoomedImageView setFrame:CGRectMake(15,15,100,100)];  
+    //[zoomedImageView setImage:[UIImage imageNamed:@"recipe.jpg"]
+    //                forState:UIControlStateNormal];
+    //[zoomedImageView setImage:[UIImage imageNamed:@"recipe.jpg"]
+    //                 forState:UIControlStateHighlighted];
+    [zoomedImageView setFrame:CGRectMake(15,15,100,100)];
     [self.view addSubview:zoomedImageView];
     [zoomedImageView addTarget:self
                         action:@selector(showZoomedPicture:)
@@ -64,9 +64,9 @@
 {
     UIViewController *zoomedImageViewController = [[UIViewController alloc] init];
     zoomedImageViewController.view.frame = self.view.frame;
-    zoomedImageViewController.title = @"Recipe"
-    
-    UIImageView *zoomedImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"recipe.jpg"];
+    zoomedImageViewController.title = @"Recipe";
+   
+    UIImageView *zoomedImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"recipe.jpg"]];
     [zoomedImageView setContentMode:UIViewContentModeScaleAspectFit];
     
     zoomedImageView.frame = zoomedImageViewController.view.frame;

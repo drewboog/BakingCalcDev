@@ -37,8 +37,7 @@
     //savedEntryViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_saved"]; - chap3
     
     //homePageViewController TBD!
-    UINavigationController *navController [[UINavigationController alloc] 
-                                           initWithRootViewController:homePageViewController];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homePageViewController];
     
     // [tabBarController setViewController:[enterNewViewController,savedEntryViewController]]; - chap3
     

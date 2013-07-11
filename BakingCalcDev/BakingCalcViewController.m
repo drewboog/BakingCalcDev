@@ -7,6 +7,8 @@
 //
 
 #import "BakingCalcViewController.h"
+#import "EnterNewViewController.h"
+#import "SavedEntryViewController.h"
 
 @interface ViewController ()
 
@@ -60,21 +62,21 @@
 -(void)buttonPressed:(UIButton *)sender
 {
     //Log buttons pressed:
-    NSLog(@"Button pressed, sender: %@", sender)
+    NSLog(@"Button pressed, sender: %@", sender);
     
     //TBD: call seperate functions for these two buttons.. (slide 99)
     
     // Action when enter new button pressed:
     if ([sender isEqual:self.enterNewButton])
     {
-        EnterNewViewController *enterNewViewController = [[EnterNewCiewController alloc] init];
+        EnterNewViewController *enterNewViewController = [[EnterNewViewController alloc] init];
         [self.navigationController pushViewController:enterNewViewController
                                              animated:YES];
     }
     
     if ([sender isEqual:self.savedEntryButton])
     {
-        SavedEntryViewController *savedEntryViewController = [[SavedEntryCiewController alloc] init];
+        SavedEntryViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
         [self.navigationController pushViewController:savedEntryViewController
                                              animated:YES];
     }
