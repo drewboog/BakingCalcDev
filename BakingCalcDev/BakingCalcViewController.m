@@ -80,9 +80,9 @@
     {
 
 
-       RecipeTableViewController *recipeTableViewController = [[recipeTableViewController alloc]
+       SavedEntryTableViewController *savedEntryTableViewController = [[savedEntryTableViewController alloc]
                                                    initWithStyle:UITableViewStyleGrouped];
-       [self.navigationController pushViewController:recipeTableViewController
+       [self.navigationController pushViewController:savedEntryTableViewController
                                             animated:YES];
                                             
     	// Will be called from table view controller now.. 
