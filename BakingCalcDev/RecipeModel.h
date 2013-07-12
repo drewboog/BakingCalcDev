@@ -13,4 +13,7 @@
 @property (strong,nonatomic) NSString *name;
 @property (strong,nonatomic) NSString *description;
 
+-(id) initWithName:(NSString *)aRecipe 
+       description:(NSString *)aDescription;
+
 @end
