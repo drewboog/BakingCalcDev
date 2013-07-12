@@ -10,6 +10,8 @@ TBD list and snippits:
   - Add logo picture to files
   - Set up to show logo at start
   
+  - Add objC class, subclass of NSObject called place.. model
+  
   
   
 7/10
