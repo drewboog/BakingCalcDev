@@ -6,6 +6,7 @@ TBD list and snippits:
   - How do I store data?
   
   - Add a photo view controller
+  - Get AFNetworking program! Json data.. 
   
   - Add logo picture to files
   - Set up to show logo at start
