@@ -22,6 +22,7 @@
 		5F7876B6178D088D0021C615 /* EnterNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7876B5178D088D0021C615 /* EnterNewViewController.m */; };
 		5F9389E0178E69E3008E7E3E /* recipe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F9389DF178E69E3008E7E3E /* recipe.jpg */; };
 		5F9389E4178EA1AC008E7E3E /* SavedEntryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389E3178EA1AC008E7E3E /* SavedEntryTableViewController.m */; };
+		5F9389E7178FC47B008E7E3E /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389E6178FC47B008E7E3E /* RecipeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		5F9389DF178E69E3008E7E3E /* recipe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe.jpg; sourceTree = "<group>"; };
 		5F9389E2178EA1AC008E7E3E /* SavedEntryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedEntryTableViewController.h; sourceTree = "<group>"; };
 		5F9389E3178EA1AC008E7E3E /* SavedEntryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedEntryTableViewController.m; sourceTree = "<group>"; };
+		5F9389E5178FC47B008E7E3E /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModel.h; sourceTree = "<group>"; };
+		5F9389E6178FC47B008E7E3E /* RecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 			children = (
 				5F9389DF178E69E3008E7E3E /* recipe.jpg */,
 				5F78769B178BBD700021C615 /* BakingCalcAppDelegate.h */,
+				5F9389E5178FC47B008E7E3E /* RecipeModel.h */,
+				5F9389E6178FC47B008E7E3E /* RecipeModel.m */,
 				5F78769C178BBD700021C615 /* BakingCalcAppDelegate.m */,
 				5F7876A4178BBD700021C615 /* MainStoryboard.storyboard */,
 				5F7876A7178BBD700021C615 /* BakingCalcViewController.h */,
@@ -199,6 +204,7 @@
 				5F7876B3178D082D0021C615 /* SavedEntryViewController.m in Sources */,
 				5F7876B6178D088D0021C615 /* EnterNewViewController.m in Sources */,
 				5F9389E4178EA1AC008E7E3E /* SavedEntryTableViewController.m in Sources */,
+				5F9389E7178FC47B008E7E3E /* RecipeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

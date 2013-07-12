@@ -7,6 +7,7 @@
 //
 
 #import "SavedEntryTableViewController.h"
+#import "SavedEntryViewController.h"
 
 @interface SavedEntryTableViewController ()
 
@@ -59,13 +60,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Title"];
+    
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Title"];
+        
+    }
     
     // Configure the cell...
-
     NSArray *recipeNames = @[@"Punkin pi",@"Bread puddin",@"Apple crsp",@"Fluffernutter",@"Orangesycle"];
-    cell.textLabel.text = names[indexPath.row];
+    cell.textLabel.text = recipeNames[indexPath.row];
     
     return cell;
 }
@@ -122,12 +128,12 @@
      */
      
      // Temp solution, not sure if this will work.. may have to use isEqual: ...
-     if (indexPath==1)
+     if (indexPath.row == 0)
      {
         SavedEntryViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
         [self.navigationController pushViewController:savedEntryViewController animated:YES];
      }
-     
+    
 }
 
 @end

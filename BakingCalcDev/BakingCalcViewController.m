@@ -80,7 +80,7 @@
     {
 
 
-       SavedEntryTableViewController *savedEntryTableViewController = [[savedEntryTableViewController alloc]
+       SavedEntryTableViewController *savedEntryTableViewController = [[SavedEntryTableViewController alloc]
                                                    initWithStyle:UITableViewStyleGrouped];
        [self.navigationController pushViewController:savedEntryTableViewController
                                             animated:YES];
