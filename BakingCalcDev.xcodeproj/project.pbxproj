@@ -23,6 +23,7 @@
 		5F9389E0178E69E3008E7E3E /* recipe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F9389DF178E69E3008E7E3E /* recipe.jpg */; };
 		5F9389E4178EA1AC008E7E3E /* SavedEntryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389E3178EA1AC008E7E3E /* SavedEntryTableViewController.m */; };
 		5F9389E7178FC47B008E7E3E /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389E6178FC47B008E7E3E /* RecipeModel.m */; };
+		5F9389EA1792150D008E7E3E /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389E91792150D008E7E3E /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		5F9389E3178EA1AC008E7E3E /* SavedEntryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedEntryTableViewController.m; sourceTree = "<group>"; };
 		5F9389E5178FC47B008E7E3E /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModel.h; sourceTree = "<group>"; };
 		5F9389E6178FC47B008E7E3E /* RecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModel.m; sourceTree = "<group>"; };
+		5F9389E81792150D008E7E3E /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = ../PhotoViewController.h; sourceTree = "<group>"; };
+		5F9389E91792150D008E7E3E /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = ../PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 		5F787692178BBD700021C615 /* BakingCalcDev */ = {
 			isa = PBXGroup;
 			children = (
+				5F9389E81792150D008E7E3E /* PhotoViewController.h */,
+				5F9389E91792150D008E7E3E /* PhotoViewController.m */,
 				5F9389DF178E69E3008E7E3E /* recipe.jpg */,
 				5F78769B178BBD700021C615 /* BakingCalcAppDelegate.h */,
 				5F9389E5178FC47B008E7E3E /* RecipeModel.h */,
@@ -205,6 +210,7 @@
 				5F7876B6178D088D0021C615 /* EnterNewViewController.m in Sources */,
 				5F9389E4178EA1AC008E7E3E /* SavedEntryTableViewController.m in Sources */,
 				5F9389E7178FC47B008E7E3E /* RecipeModel.m in Sources */,
+				5F9389EA1792150D008E7E3E /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
