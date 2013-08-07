@@ -1,5 +1,62 @@
 TBD list and snippits:
 
+8/6
+
+  - How do I store data?
+  - Get core data setup.. tutorial exists
+  
+  - Add a photo view controller
+  
+  - Add logo picture to files
+  - Set up to show logo at start
+
+
+Photo view controller:
+
+// PhotoViewController.h
+#import <UIKit/UIKit.h>
+
+@interface PhotoViewController : UIViewController
+
+@property (weak, nonatomic) NSString *imageFileName;
+@property (weak, nonatomic) NSString *imageTitle;
+
+@end
+
+
+// PhotoViewController.m
+#import "PhotoViewController.h"
+
+@implementation PhotoViewController
+
+-(void)viewDidLoad {
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.imageFileName]];
+    imageView.frame = CGRectMake(10,10,300,300);
+    [self.view addSubview:imageView];
+
+    UILabel *imageTitleLabel = [[UILabel alloc] init];
+    imageTitleLabel.text = self.imageTitle;
+    imageTitleLabel.frame = CGRectMake(10,320,300,40);
+    [self.view addSubview:imageTitleLabel];
+}
+@end
+
+
+// in feedTableViewController.m
+#import "FeedTableViewController.h"
+#import "PhotoViewController.h"
+...
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  PhotoViewController *photoVC = [[PhotoViewController alloc] init];
+  photoVC.imageFileName = self.imageFileNameArray[indexPath.row];
+  photoVC.imageTitle = self.imageTitleArray[indexPath.row];
+  
+
+  [self.navigationController pushViewController:photoVC animated:YES];
+}
+
+@end
 
 
 7/11
