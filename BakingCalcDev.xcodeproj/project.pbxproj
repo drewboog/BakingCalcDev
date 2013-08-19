@@ -24,6 +24,7 @@
 		5F9389E4178EA1AC008E7E3E /* SavedEntryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389E3178EA1AC008E7E3E /* SavedEntryTableViewController.m */; };
 		5F9389E7178FC47B008E7E3E /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389E6178FC47B008E7E3E /* RecipeModel.m */; };
 		5F9389EA1792150D008E7E3E /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389E91792150D008E7E3E /* PhotoViewController.m */; };
+		5F9389F117933C54008E7E3E /* RecipeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F9389EF17933C54008E7E3E /* RecipeDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		5F9389E6178FC47B008E7E3E /* RecipeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModel.m; sourceTree = "<group>"; };
 		5F9389E81792150D008E7E3E /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = ../PhotoViewController.h; sourceTree = "<group>"; };
 		5F9389E91792150D008E7E3E /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = ../PhotoViewController.m; sourceTree = "<group>"; };
+		5F9389F017933C54008E7E3E /* RecipeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				5F7876B2178D082D0021C615 /* SavedEntryViewController.m */,
 				5F9389E2178EA1AC008E7E3E /* SavedEntryTableViewController.h */,
 				5F9389E3178EA1AC008E7E3E /* SavedEntryTableViewController.m */,
+				5F9389EF17933C54008E7E3E /* RecipeDataModel.xcdatamodeld */,
 				5F7876B4178D088D0021C615 /* EnterNewViewController.h */,
 				5F7876B5178D088D0021C615 /* EnterNewViewController.m */,
 			);
@@ -211,6 +214,7 @@
 				5F9389E4178EA1AC008E7E3E /* SavedEntryTableViewController.m in Sources */,
 				5F9389E7178FC47B008E7E3E /* RecipeModel.m in Sources */,
 				5F9389EA1792150D008E7E3E /* PhotoViewController.m in Sources */,
+				5F9389F117933C54008E7E3E /* RecipeDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +334,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5F9389EF17933C54008E7E3E /* RecipeDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5F9389F017933C54008E7E3E /* RecipeDataModel.xcdatamodel */,
+			);
+			currentVersion = 5F9389F017933C54008E7E3E /* RecipeDataModel.xcdatamodel */;
+			path = RecipeDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5F78767F178BBD700021C615 /* Project object */;
 }

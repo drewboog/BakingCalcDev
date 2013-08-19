@@ -10,6 +10,7 @@
 
 @interface SavedEntryViewController ()
 
+
 @end
 
 @implementation SavedEntryViewController
@@ -35,6 +36,21 @@
                               // Fonts and formatting slide 85:
                               nameLabel.text = @"Recipe: Punkin pi";
                               [self.view addSubview:nameLabel];
+        
+        
+        // Call json data here to get recipe info:
+        //NSString *textPath = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"json"];
+        //NSError *error;
+        
+        //NSString *content = [NSString stringWithContentsOfFile:textPath encoding:NSUTF8StringEncoding error:&error];  //error checking omitted
+        
+        //SBJsonParser *parser = [[SBJsonParser alloc] init];
+        //
+        //NSDictionary *json = [parser objectWithString: content];
+        
+        
+        
+        
     }
     return self;
 }

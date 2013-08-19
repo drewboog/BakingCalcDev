@@ -55,6 +55,8 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
+    
+    // To be calculated from data.. 
     return 5;
 }
 
@@ -72,6 +74,8 @@
     // Configure the cell...
     NSArray *recipeNames = @[@"Punkin pi",@"Bread puddin",@"Apple crsp",@"Fluffernutter",@"Orangesycle"];
     cell.textLabel.text = recipeNames[indexPath.row];
+    
+    
     
     return cell;
 }

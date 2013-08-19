@@ -9,7 +9,7 @@
 #import "BakingCalcAppDelegate.h"
 #import "BakingCalcViewController.h"
 
-//#import "HomePageViewController.h" //Using normal viewController for this
+//#import "HomePageViewController.h" //Using normal viewController for this, TBD
 #import "EnterNewViewController.h"
 #import "SavedEntryViewController.h"
 
@@ -17,30 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // TBD: Create new class for new view controllers..
+    // Adding Core data logic, init the 
     UIViewController *homePageViewController = [[ViewController alloc] init];
-    //homePageViewController.title = @"Baking Calc!";
-    
-    // Add view controllers and add them to the tabs
-    // TBD: Make sure names match those in view controller
-    //UIViewController *enterNewViewController = [[EnterNewViewController alloc] init];
-    //enterNewViewController.title = @"New Recipe";
-    
-    //UIViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
-    //savedEntryViewController.title = @"Recipes";
-    
-    //enterNewViewController.view.backgroundColor = [UIColor blueColor];
-    //savedEntryViewController.view.backgroundColor = [UIColor yellowColor];
-    
-    // For this to work there must be a "tab_icon_new.png" saved in cache/filesystem.. TBD! 
-    //enterNewViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_new"]; - chap3
-    //savedEntryViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_saved"]; - chap3
-    
-    //homePageViewController TBD!
+
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homePageViewController];
-    
-    // [tabBarController setViewController:[enterNewViewController,savedEntryViewController]]; - chap3
-    
+
     // Create the UI window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -51,7 +32,49 @@
     [self.window makeKeyAndVisible];
     return YES;
     
-    // 7/9, Left off at slide 98!- Debugging needed now.. 
+}
+
+- (void)initCoreDataRecipes
+{
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObject *recipeInfo = [NSEntityDescription
+                                       insertNewObjectForEntityForName:@"RecipeInfo"
+                                       inManagedObjectContext:context];
+    [recipeInfo setValue:@"Test Bank" forKey:@"name"];
+    [recipeInfo setValue:@"Testville" forKey:@"city"];
+    [recipeInfo setValue:@"Testland" forKey:@"state"];
+    
+    NSManagedObject *recipeDetails = [NSEntityDescription
+                                          insertNewObjectForEntityForName:@"RecipeDetails"
+                                          inManagedObjectContext:context];
+    [recipeDetails setValue:[NSDate date] forKey:@"closeDate"];
+    [recipeDetails setValue:[NSDate date] forKey:@"updateDate"];
+    [recipeDetails setValue:[NSNumber numberWithInt:12345] forKey:@"zip"];
+    [recipeDetails setValue:recipeInfo forKey:@"info"];
+    [recipeInfo setValue:recipeDetails forKey:@"details"];
+    NSError *error;
+    if (![context save:&error])
+    {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+}
+
+- (void)executeFetchRequest
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"RecipeInfo" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *info in fetchedObjects)
+    {
+        NSLog(@"Name: %@", [info valueForKey:@"name"]);
+        NSManagedObject *details = [info valueForKey:@"details"];
+        NSLog(@"Zip: %@", [details valueForKey:@"zip"]);
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

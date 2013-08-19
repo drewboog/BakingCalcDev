@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="RecipeDetails" syncable="YES">
+        <attribute name="timetomake" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="RecipeInfo" syncable="YES">
+        <attribute name="ingredents" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="units" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="data" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RecipeInfo" inverseName="data" inverseEntity="RecipeInfo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RecipeInfo" positionX="160" positionY="192" width="128" height="103"/>
+        <element name="RecipeDetails" positionX="171" positionY="225" width="128" height="60"/>
+    </elements>
+</model>

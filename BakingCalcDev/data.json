@@ -1,0 +1,20 @@
+[
+  {
+  "title": "Punkin pi",
+  "detail": "Delish pie made of pumpkins and pie dough",
+  "ingredients": "pumpkin,sugar,flour",
+  "amounts": "12,6,2",
+  "units": "grams,lbs,cups"
+  "thumbnail": "http://courseware.codeschool.com.s3.amazonaws.com/try_ios/level6demo/5thumb.png"
+  "Procedure":"Roll dough..."
+  },
+  {
+  "title": "Cake",
+  "detail": "Delish cake made of pumpkins and pie dough",
+  "ingredients": "sugar,flour",
+  "amounts": "6,2",
+  "units": "lbs,cups"
+  "thumbnail": "http://courseware.codeschool.com.s3.amazonaws.com/try_ios/level6demo/5thumb.png"
+  "Procedure":"Roll dough..."
+  },
+]

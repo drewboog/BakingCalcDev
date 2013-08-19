@@ -12,6 +12,8 @@
 @class BakingCalcViewController;
 
 @interface BakingCalcAppDelegate : UIResponder <UIApplicationDelegate>
+//NSManagedObjectContext
 @property (strong, nonatomic) UIWindow *window;
 @property (strong,nonatomic) ViewController *viewController;
+
 @end

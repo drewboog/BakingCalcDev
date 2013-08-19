@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RecipeModel : NSObject
+@interface Recipe : NSObject
 
 @property (strong,nonatomic) NSString *name;
 @property (strong,nonatomic) NSString *description;

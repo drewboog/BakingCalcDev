@@ -8,13 +8,26 @@
 
 #import "RecipeModel.h"
 
-@implementation RecipeModel
+@implementation Recipe
 
--(id)init
+-(id) init
 {
- self = [super init];
- 
- return self;
+    self = [self initWithName:@"defaultName"
+                  description:@"defaultDescription"];
+    return self;
+}
+
+-(id) initWithName:(NSString *)aRecipe
+       description:(NSString *)aDescription
+{
+    self = [super init];
+    if(self)
+    {
+        self.name = aRecipe;
+        self.description = aDescription;
+    }
+    
+    return self;
 }
 
 @end

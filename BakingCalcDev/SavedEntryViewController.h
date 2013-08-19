@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class SBJsonParser;
 @interface SavedEntryViewController : UIViewController
+
 
 @end

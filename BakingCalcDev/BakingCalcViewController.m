@@ -30,8 +30,6 @@
     
     
     // Add button 1, New recipe
-    //self.view.backgroundcolor = [UIColor blueColor];
-    
     self.enterNewButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.enterNewButton.frame = CGRectMake(85,100,150,44);
     [self.enterNewButton setTitle:@"New Recipe" forState:UIControlStateNormal];
@@ -85,10 +83,6 @@
        [self.navigationController pushViewController:savedEntryTableViewController
                                             animated:YES];
                                             
-    	// Will be called from table view controller now.. 
-        //SavedEntryViewController *savedEntryViewController = [[SavedEntryViewController alloc] init];
-        //[self.navigationController pushViewController:savedEntryViewController
-                                             //animated:YES];
     }
 
 }
