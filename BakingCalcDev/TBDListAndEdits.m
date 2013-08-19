@@ -1,4 +1,12 @@
 TBD list and snippits:
+8/19
+- Work on CoreData, get setup
+
+- Make folders for classes:
+    AppDelegate
+    Controllers
+    Models
+    Helpers
 
 8/6
 
